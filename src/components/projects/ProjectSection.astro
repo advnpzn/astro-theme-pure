@@ -46,10 +46,10 @@ const projectIconSet: Record<string, iconsType> = {
         }
 
         return (
-          <div class='relative overflow-hidden rounded-xl border'>
+          <div class='project-card relative overflow-hidden rounded-xl border transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 hover:bg-primary/5'>
             {imagePath && (
               <Image
-                class='absolute end-0 z-0 m-0 h-full w-1/2 object-cover opacity-40'
+                class='project-card-image absolute end-0 z-0 m-0 h-full w-1/2 object-cover opacity-40 transition-opacity duration-300'
                 src={images[imagePath]()}
                 alt={project.name}
                 loading='lazy'
@@ -70,7 +70,7 @@ const projectIconSet: Record<string, iconsType> = {
               )}
             >
               <a
-                class='line-clamp-1 font-medium text-foreground no-underline transition-colors'
+                class='line-clamp-1 font-medium text-foreground no-underline transition-colors hover:text-primary'
                 href={project.links[0].href}
                 target='_blank'
               >
@@ -85,7 +85,7 @@ const projectIconSet: Record<string, iconsType> = {
                   return (
                     <a
                       href={link.href}
-                      class='rounded-full bg-muted p-1 text-muted-foreground transition-colors sm:p-1.5'
+                      class='rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground sm:p-1.5'
                       aria-label={link.type}
                       target='_blank'
                     >
@@ -101,3 +101,9 @@ const projectIconSet: Record<string, iconsType> = {
     }
   </div>
 </div>
+
+<style>
+  .project-card:hover .project-card-image {
+    opacity: 0.6;
+  }
+</style>

@@ -4,19 +4,11 @@ import { Image } from 'astro:assets'
 import { Button, Collapse, Icon } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
-import Sponsors from '@/components/projects/Sponsors.astro'
-import Sponsorship from '@/components/projects/Sponsorship.astro'
-import alipay from '@/assets/alipay-qrcode.jpg'
 import KeyIcon from '@/assets/icons/key.svg'
-import wechat from '@/assets/wechat-qrcode.jpg'
 
 const headings = [
-  { depth: 2, slug: 'theme', text: 'Theme' },
   { depth: 2, slug: 'programs', text: 'Programs' },
-  { depth: 2, slug: 'learnings', text: 'Learnings' },
-  { depth: 2, slug: 'others', text: 'Others' },
   { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
-  { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
 ]
 ---
 
@@ -24,168 +16,144 @@ const headings = [
   <p>Github Activities:</p>
   <p>
     <Image
-      src='https://ghchart.rshah.org/659eb9/cworld1'
+      src='https://ghchart.rshah.org/659eb9/advnpzn'
       alt='github activities'
       inferSize
       loading='lazy'
     />
   </p>
-  <p>
-    If you think it would be useful or interesting to collaborate on a project, you can donate to
-    support my work or contact me to discuss a project.
-  </p>
-  <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship'>
-    <Icon class='size-5' name='receive-money' slot='before' />
-  </Button>
 
-  <h2 id='theme'>Theme</h2>
+  <h2 id='programs'></h2>
   <ProjectSection
     projects={[
       {
-        name: '🍭 Astro-theme-pure',
-        description: 'A simple, clean but powerful blog theme build by astro.',
+        name: 'akipy',
+        description: 'Python library wrapper for Akinator API, reverse-engineered from website calls',
         links: [
-          { type: 'github', href: 'https://github.com/cworld1/astro-theme-pure' },
-          { type: 'site', href: 'https://github.com/cworld1/astro-theme-pure' },
-          {
-            type: 'doc',
-            href: 'https://github.com/cworld1/astro-theme-pure/blob/main/src/content/blog/customize/index.md'
-          }
-        ]
-      }
-    ]}
-  />
-
-  <h2 id='programs'>Programs</h2>
-  <ProjectSection
-    projects={[
-      {
-        name: '📒 Notie',
-        description:
-          'Android note App complies with Material You specifications, developed using Java',
-        links: [
-          { type: 'github', href: 'https://github.com/cworld1/notie' },
-          {
-            type: 'release',
-            href: 'https://github.com/cworld1/notie/releases'
-          }
+          { type: 'github', href: 'https://github.com/advnpzn/akipy' },
+          { type: 'release', href: 'https://github.com/advnpzn/akipy/releases'}
         ]
       },
       {
-        name: '💄 PKU Art',
-        description: 'A script to beautify pku course website',
+        name: 'Akinator-Bot',
+        description: 'Telegram Bot for playing the Akinator guessing game (Unofficial)',
         links: [
-          { type: 'github', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'site', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'doc', href: 'https://docs.arthals.ink/docs/pku-art' }
+          { type: 'github', href: 'https://github.com/advnpzn/Akinator-Bot' },
+        ]
+      },
+      {
+        name: 'chip8emu',
+        description: 'An attempt at CHIP-8 emulator',
+        links: [
+          { type: 'github', href: 'https://github.com/advnpzn/chip8emu' },
+        ]
+      },
+      {
+        name: 'CaesarVis',
+        description: 'Caesar Cipher Encryption Visualisation on every pixel (RGBA) of an image',
+        links: [
+          { type: 'github', href: 'https://github.com/advnpzn/CaesarVis' },
+        ]
+      },
+      {
+        name: 'GaussFilt',
+        description: 'Gaussian Filter using SFML with Dear ImGui',
+        links: [
+          { type: 'github', href: 'https://github.com/advnpzn/GaussFilt' },
+        ]
+      },
+      {
+        name: 'PathFinder-sfml',
+        description: 'Implementation of a pathfinder using SFML',
+        links: [
+          { type: 'github', href: 'https://github.com/advnpzn/PathFinder-sfml' },
         ]
       }
     ]}
   />
   <Collapse title='Some old projects'>
-    <ProjectSection
-      projects={[
+    <div class='pt-2'>
+      <ProjectSection
+        projects={[
         {
-          name: 'Search Switcher',
-          description: 'Add links to each other in search engines',
-          links: [{ type: 'github', href: 'https://github.com/cworld1/search-switcher' }]
+          name: 'Neco-Arc-DVDLogo',
+          description: 'DVD Logo screensaver but it\'s Neco-Arc, made using C++ and SFML',
+          links: [
+            { type: 'github', href: 'https://github.com/advnpzn/Neco-Arc-DVDLogo' },
+          ]
         },
         {
-          name: 'Pure Baidu',
-          description: 'Baidu search page beautification module',
+          name: 'Library-Genesis-Bot',
+          description: 'Telegram Library Genesis Bot for searching and downloading books',
           links: [
-            { type: 'doc', href: 'https://cworld0.com/blog/pure-baidu' },
-            { type: 'site', href: 'https://userstyles.org/styles/173673/pure' }
+            { type: 'github', href: 'https://github.com/advnpzn/Library-Genesis-Bot' },
+          ]
+        },
+        {
+          name: 'snek',
+          description: 'Yet another classic arcade snake game made using raylib',
+          links: [
+            { type: 'github', href: 'https://github.com/advnpzn/snek' },
+          ]
+        },
+        {
+          name: 'Basic-Frontface-detection-using-OpenCV',
+          description: 'Front face detection using pre-trained HaarsCascade in OpenCV',
+          links: [
+            { type: 'github', href: 'https://github.com/advnpzn/Basic-Frontface-detection-using-OpenCV' },
+          ]
+        },
+        {
+          name: 'ceepeepee',
+          description: 'Random C++ stuff and experiments',
+          links: [
+            { type: 'github', href: 'https://github.com/advnpzn/ceepeepee' },
+          ]
+        },
+        {
+          name: 'tgcocbot',
+          description: 'Telegram Bot for Clash of Clans',
+          links: [
+            { type: 'github', href: 'https://github.com/advnpzn/tgcocbot' },
+          ]
+        },
+        {
+          name: 'playground',
+          description: 'Playground for SFML experiments',
+          links: [
+            { type: 'github', href: 'https://github.com/advnpzn/playground' },
+          ]
+        },
+        {
+          name: 'zoro.to-scraper',
+          description: 'Zoro.to anime scraper (archived)',
+          links: [
+            { type: 'github', href: 'https://github.com/advnpzn/zoro.to-scraper' },
           ]
         }
       ]}
     />
+    </div>
   </Collapse>
-
-  <h2 id='learnings'>Learnings</h2>
-  <ProjectSection
-    class='my-2'
-    projects={[
-      {
-        name: 'Rust Learning',
-        description: 'Some notes and code about CWorld learning Rust',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/rust-learning' }]
-      },
-      {
-        name: 'CS 213 Learning',
-        description: 'Notes, code and experiences for Introduction to Computer Systems course',
-        links: [
-          {
-            type: 'github',
-            href: 'https://github.com/zhuozhiyongde/Introduction-To-Computer-System-2023Fall-PKU'
-          }
-        ]
-      }
-    ]}
-  />
-
-  <h2 id='others'>Others</h2>
-  <ProjectSection
-    projects={[
-      {
-        name: 'CWorld',
-        description: "CWorld's Github",
-        links: [{ type: 'github', href: 'https://github.com/cworld1' }]
-      },
-      {
-        name: 'Arthals',
-        description: 'Arthals Github',
-        links: [{ type: 'github', href: 'https://github.com/zhuozhiyongde' }]
-      }
-    ]}
-  />
 
   <!-- gpg signature -->
   <h2 id='gpg-signature'>GPG Signature</h2>
   <p>
     You can verify the authenticity of the files I signed by checking the GPG signature. My GPG key
-    is <code>114514</code>, and you can find it on the opengpg key servers or download from it.
+    fingerprint is <code>64A47AC928ACB2B7FF26A82CA9968BA0BF471DBA</code>, and you can find it on the OpenPGP key servers.
   </p>
-  <Button href='https://keys.openpgp.org/search?q=114514' title='Checkout my key' target='_blank'>
+  <Button href='https://keys.openpgp.org/search?q=advnpzn@proton.me' title='Checkout my key' target='_blank'>
     <KeyIcon class='size-5' slot='before' />
   </Button>
 
-  <!-- sponsorship -->
-  <h2 id='sponsorship'>Sponsorship</h2>
-  <p>Please leave a message or contact me proactively after sponsorship.</p>
-  <Sponsorship
-    methods={[
-      { name: 'WeChat', icon: 'wechat-pay', image: wechat },
-      { name: 'Alipay', icon: 'alipay', image: alipay }
-    ]}
-  />
-  <p>Thanks to the following sponsors:</p>
-  <Sponsors
-    sponsors={[
-      { name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' },
-      { name: '华雄(QQ：1300****71)', amount: '5.00', date: '2019-12-30' },
-      { name: '◌(QQ：1934****45)', amount: '3.00', date: '2019-12-30' },
-      { name: 'Anonymous', amount: '20.00', date: '2022-04-06' }
-    ]}
-  />
 </PageLayout>
 
 <style>
-  .sponsorship-card {
-    & .sponsorship-card-img {
-      opacity: 0.3;
-      --un-blur: blur(4px);
-      filter: var(--un-blur);
-    }
 
     &:hover {
       & .sponsorship-card-icon {
         opacity: 0;
       }
-      & .sponsorship-card-img {
-        opacity: 1;
-        --un-blur: blur(0);
-      }
+      
     }
-  }
 </style>
